@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>С 23 Февраля!</title>
+  <style>
+    /* Общие стили и flex-верстка для фиксации футера */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to right, #00495b, #8b0041);
+      color: white;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Фиксированное меню */
+    .navbar {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin: 0 20px;
+    }
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .navbar ul li a:hover {
+      color: #ffcc00;
+    }
+    /* Основной контейнер */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      height: 200px;
+      max-width: 1100px;
+      margin: 100px auto 30px;
+      padding: 20px;
+      gap: 20px;
+      flex: 1;
+    }
+    /* Левая колонка с карточками */
+    .left-column {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* уменьшен промежуток между карточками */
+    }
+    .container-custom {
+      background: rgba(255, 255, 255, 0.95);
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: left;
+      margin-bottom: 10px; /* уменьшен отступ между карточками */
+      transition: 0.3s;
+    }
+    .container-custom:hover {
+      transform: scale(1.02);
+    }
+    /* Заголовки и текст */
+    h1, h3 {
+      color: #8b008b;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+    /* Изображения */
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+    }
+    /* Кнопки */
+    .btn-custom {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right, #c00, #900);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+    }
+    .btn-custom:hover {
+      background: linear-gradient(to right, rgb(153, 0, 115), rgb(85, 0, 102));
+      transform: translateY(-2px);
+    }
+ 
+    .right-column {
+      width: 30%; 
+      background: rgba(255, 255, 255, 0.95);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: rgb(0, 0, 0);
+      text-align: left;
+      
+    }
+    .right-column h3 {
+      margin-top: 0;
+    }
+    .right-column ul {
+      padding-left: 20px;
+    }
+    .right-column li {
+      margin: 8px 0;
+    }
+    .separator {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 15px 0;
+    }
+    
+    form {
+      margin-top: 10px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: #c00;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: rgb(180, 27, 201);
+    }
+   
+    .footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 14px;
+      padding: 100;
+      text-align: center;
+      
+    }
+
+    @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left-column, .right-column {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#about">О празднике</a></li>
+      <li><a href="#congrats">Поздравления</a></li>
+    </ul>
+  </nav>
+
+  <!-- Основной контент -->
+  <div class="main-container">
+    
+    <!-- Левая колонка с карточками -->
+    <div class="left-column">
+      <div id="home" class="container-custom">
+        <h1>С Женским Днем!</h1>
+        <p>Поздравляем с 8 марта! Желаем счастья, любви и весеннего настроения.</p>
+        <div class="image-container">
+          <img src="а.jpg" alt="8 марта">
+        </div>
+        <a href="#" class="btn-custom">Отправить поздравление</a>
+      </div>
+
+      <div id="about" class="container-custom">
+        <h1>О празднике</h1>
+        <p>8 марта – Международный женский День , праздник женщин.</p>
+        <div class="image-container">
+          <img src="и.jpg" alt="Цветы">
+        </div>
+      </div>
+
+      <div id="congrats" class="container-custom">
+        <h1>Поздравления</h1>
+        <p>Поздравляем всех мам,девушек, и девочек!</p>
+        <div class="image-container">
+          <img src="п.jpg" alt="Поздравление">
+        </div>
+      </div>
+    </div>
+
+    <!-- Правая колонка (активности) -->
+    <div class="right-column">
+      <h3>Интересные факты</h3>
+      <ul>
+        <li>Праздник был учрежден в 1910 году.</li>
+        <li>Изначально назывался Днем Матери.</li>
+        <li>Сегодня его отмечают не только Мамы.</li>
+      </ul>
+      
+      <!-- Разделитель между фактами и голосованием -->
+      <hr class="separator">
+
+      <h3>Голосование</h3>
+      <p>Как вы празднуете 8 марта?</p>
+      <form>
+        <label><input type="radio" name="vote" checked> Дома с семьей</label>
+        <label><input type="radio" name="vote"> С друзьями</label>
+        <label><input type="radio" name="vote"> На природе</label>
+        <button type="submit">Голосовать</button>
+      </form>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
